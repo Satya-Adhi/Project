@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialDesign } from './material/material';
 import { ForgotComponent } from './auth/forgot/forgot.component';
 import { OpenComponent } from './auth/open/open.component';
+import { AdminComponent } from './admin/admin.component';
+import { MaterialDesign } from './material/material';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { OpenComponent } from './auth/open/open.component';
     LoginComponent,
     RegisterComponent,
     ForgotComponent,
-    OpenComponent
+    OpenComponent,
+    DashboardComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
