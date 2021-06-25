@@ -1,39 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminComponent } from './admin.component';
+import { AdminComponent } from './admin/admin.component';
+import { ListComponent } from './list/list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material';
-import { DashboardComponent } from './dashboard/dashboard.component';
-
 
 const routes: Routes = [
   {
     path:'',
-    component:AdminComponent,
-    children:[
-      {
-        path:'dashboard',
-        component:DashboardComponent
-      },
-      {
-        path:'',
-        redirectTo:'/admin/dashboard',
-        pathMatch:'full'
-      }
-    ]
+    component:AdminComponent
   },
-  
+  {
+    path:'list',
+    component:ListComponent
+  }
 ]
 
-
 @NgModule({
-  declarations: [DashboardComponent],
-  entryComponents:[
+  declarations: [
+    AdminComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
     MaterialDesign,
+    RouterModule.forChild(routes)
   ]
 })
+
 export class AdminModule { }

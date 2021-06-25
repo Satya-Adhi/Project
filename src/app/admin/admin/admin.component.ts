@@ -11,11 +11,5 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  menu=[
-    {
-      name:'Dashboard',
-      icon:'Dashboard',
-      url:'/admin/dashboard'
-    }
-  ]
+
 }

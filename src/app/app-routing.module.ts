@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ForgotComponent } from './auth/forgot/forgot.component';
 import { LoginComponent } from './auth/login/login.component';
 import { OpenComponent } from './auth/open/open.component';
@@ -31,13 +29,8 @@ const routes: Routes = [
   },
   {
     path:'admin',
-    component: AdminComponent
-  },
-  {
-    path:'dashboard',
-    component: DashboardComponent
+    loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)
   }
-
 ];
 
 @NgModule({
