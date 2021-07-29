@@ -9,6 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForgotComponent } from './auth/forgot/forgot.component';
 import { OpenComponent } from './auth/open/open.component';
 import { MaterialDesign } from './material/material';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment.prod';
 
 
 @NgModule({
@@ -23,7 +28,10 @@ import { MaterialDesign } from './material/material';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialDesign
+    MaterialDesign,
+    HttpClientModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
